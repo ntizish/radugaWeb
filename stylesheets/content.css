@@ -2,8 +2,8 @@ body {
     background-color: #121212;
     overflow: hidden;
     /*height: 100vh;*/
-    width: 100vw;
     background-image: url("../img/columns.svg");
+    width: 100vw;
     background-size: cover;
 }
 
@@ -75,10 +75,12 @@ body {
 
 .navBlock {
     display: inline-block;
+    position: relative;
     margin-top: 13vh;
+    z-index: 5;
 }
 
-.navBlock a {
+.navBlock p {
     display: inline-block;
     color: white;
     font-family: Arimo-Regular;
@@ -89,19 +91,99 @@ body {
     transition: filter 0.25s linear;
 }
 
-.navBlock a:hover{
+.navBlock p:hover{
     filter: blur(0);
 }
 
 .runLine {
     width: 100vw;
     z-index: 1;
-    position: relative;
+    position: absolute;
     overflow: hidden;
-
+    margin-top: -5.5vh;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .runLineImg {
     height: 100vh;
+    margin-left: 0;
+    animation: marc 10s linear infinite;
+    animation-play-state: running;
+    display: inline-block;
+    vertical-align: top;
+
 }
 
+@keyframes marc {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-100%);}
+}
+
+/*shop page*/
+
+.shopPage .navBlock {
+    margin-top: 43.5vh;
+}
+
+.shopPage .shopLink {
+    filter: blur(0);
+}
+
+.shopPage .workspaceOne {
+    padding-right: 0;
+}
+
+.shopBackG {
+    width: 100vw;
+    z-index: -1;
+    position: absolute;
+    margin-top: -49vh;
+}
+
+.bin {
+    text-transform: uppercase;
+    font-family: Arimo-Regular;
+    font-size: 2.5vw;
+    color: white;
+    position: absolute;
+    margin-top: 5.7vh;
+    margin-left: 73.5vw;
+}
+
+.itemBlock {
+    position: relative;
+    height: 50vh;
+    margin-top: 3.5vh;
+    display: inline-block;
+    align-items: center;
+    z-index: 5;
+}
+
+.itemBlock img {
+    padding-right: 5.5vw;
+    margin-top: 3vh;
+    z-index: 5;
+    position: relative;
+}
+
+.tote {
+    width: 11.7vw;
+}
+
+.envelope {
+    width: 17vw;
+}
+
+.books {
+    width: 12vw;
+}
+
+.cream {
+    width: 8vw;
+}
+
+.creamToo {
+    width: 11.7vw;
+    padding-right: 0;
+}

@@ -1,0 +1,104 @@
+body {
+    background-color: #121212;
+    overflow: hidden;
+    background-image: url("../img/columns.svg");
+}
+
+.title {
+    font-family: Arimo-Bold;
+    font-size: 3.3vw;
+    color: white;
+    position: relative;
+    margin-top: 5.3vh;
+}
+
+.logoDiv {
+    width: 5vw;
+    margin-top: 5.5vh;
+    position: relative;
+}
+
+.workspaceOne {
+    padding-left: 5.20vw;
+    padding-right: 5.20vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 5;
+    display: block;
+}
+
+.linkContainer {
+    display: inline-block;
+    position: relative;
+    margin-top: 12.5vh;
+    width: 100vw;
+    vertical-align: top;
+}
+
+.vkLogo {
+    width: 2.5vw;
+    position: relative;
+}
+
+.linkArrow {
+    width: 1.3vw;
+    margin-left: 15.8vw;
+    position: relative;
+}
+
+.linkPortfolio {
+    font-family: Arimo-Regular;
+    font-size: 1.25vw;
+    margin-left: 0.8vw;
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+.linkContainer {
+    display: inline-block;
+    position: relative;
+    margin-top: 12.5vh;
+    width: 100vw;
+    vertical-align: top;
+}
+
+.radugaDesc {
+    font-family: Arimo-Regular;
+    font-size: 1.25vw;
+    color: white;
+    position: relative;
+    margin-top: 2vh;
+}
+
+.navBlock {
+    display: inline-block;
+    margin-top: 13vh;
+}
+
+.navBlock a {
+    display: inline-block;
+    color: white;
+    font-family: Arimo-Regular;
+    font-size: 1.7vw;
+    position: relative;
+    margin-right: 6.8vw;
+    filter: blur(0.2vw);
+    transition: filter 0.25s linear;
+}
+
+.navBlock a:hover{
+    filter: blur(0);
+}
+
+.runLine {
+    height: 100vh;
+    z-index: 1;
+    position: absolute;
+    display: block;
+}
+
+.runLineImg {
+    height: 100vh;
+}
+

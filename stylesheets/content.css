@@ -1,6 +1,8 @@
 body {
     background-color: #121212;
     overflow: hidden;
+    height: 100vh;
+    width: 100vw;
     background-image: url("../img/columns.svg");
 }
 
@@ -24,7 +26,6 @@ body {
     height: 100vh;
     position: absolute;
     z-index: 5;
-    display: block;
 }
 
 .linkContainer {
@@ -92,10 +93,11 @@ body {
 }
 
 .runLine {
-    height: 100vh;
+    width: 100vw;
     z-index: 1;
     position: absolute;
-    display: block;
+    overflow: hidden;
+
 }
 
 .runLineImg {

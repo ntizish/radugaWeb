@@ -146,9 +146,34 @@ body {
     font-family: Arimo-Regular;
     font-size: 2.5vw;
     color: white;
+    z-index: 2;
     position: absolute;
     margin-top: 5.7vh;
     margin-left: 73.5vw;
+}
+
+.itemName {
+    text-transform: uppercase;
+    font-family: Arimo-Regular;
+    font-size: 2.5vw;
+    color: white;
+    z-index: -1;
+    position: absolute;
+    margin-top: 5.7vh;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+}
+
+.itemPrice {
+    text-transform: uppercase;
+    font-family: Arimo-Regular;
+    font-size: 1.7vw;
+    color: white;
+    z-index: -2;
+    position: absolute;
+    margin-top: 11.7vh;
+    opacity: 0;
+    transition: opacity 0.25s linear;
 }
 
 .itemBlock {
@@ -186,4 +211,25 @@ body {
 .creamToo {
     width: 11.7vw;
     padding-right: 0;
+}
+
+/*start of the tanPage*/
+
+.picker img {
+    width: 15vw;
+    display: inline-block;
+
+}
+
+.picker {
+    position: absolute;
+    top: 40vh;
+    display: inline-block;
+    width: 89.6vw;
+    vertical-align: baseline;
+    justify-content: space-between;
+}
+
+.purpleT, .redT, .greenT {
+    padding-right: 9.6vw;
 }

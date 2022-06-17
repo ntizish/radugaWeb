@@ -2,7 +2,7 @@ body {
     background-color: #121212;
     overflow: hidden;
     /*height: 100vh;*/
-    background-image: url("../img/columns.svg");
+    /*background-image: url("../img/columns.svg");*/
     width: 100vw;
     background-size: cover;
 }
@@ -224,14 +224,19 @@ body {
 .picker {
     position: absolute;
     top: 40vh;
-    display: inline-block;
+    height: 14vw;
+    /*display: inline-block;*/
     width: 89.6vw;
     vertical-align: baseline;
     justify-content: space-between;
 }
 
-.purpleT {
+/*.purpleT, .redT, .greenT {*/
+/*    padding-right: 9.6vw;*/
+/*}*/
 
+.purpleT {
+    position: absolute;
 }
 
 .redT {
@@ -249,6 +254,86 @@ body {
     left: 77.2vw;
 }
 
-/*.greenT:hover {*/
-/*    transform: scale(1.2, 1.2);*/
-/*}*/
+.pickedColor {
+    text-transform: uppercase;
+    font-family: Arimo-Regular;
+    font-size: 2.5vw;
+    color: white;
+    z-index: 2;
+    position: absolute;
+    top: 4.3vh;
+    opacity: 0;
+}
+
+.request {
+    position: absolute;
+    vertical-align: top;
+    top: 82vh;
+    width: 50vw;
+}
+
+.fill {
+    position: relative;
+    z-index: 10;
+    width: 30vw;
+}
+
+.inputData {
+    position: relative;
+    z-index: 11;
+    width: 16vw;
+    font-size: 1.7vw;
+    font-family: Arimo-Italic;
+    color: white;
+    background-color: #121212;
+    opacity: 100%;
+    border: none;
+    padding-bottom: 1vh;
+}
+
+input:focus{
+    outline: none;
+}
+
+.sendButton {
+    position: absolute;
+    color: white;
+    font-family: Arimo-Regular;
+    font-size: 1.7vw;
+    text-decoration: underline;
+    left: 19vw;
+    top: 0;
+    z-index: 50;
+}
+
+.scheduledDiv {
+    position: fixed;
+    width: 42vw;
+    z-index: 15;
+    margin: 40vh auto auto;
+    left: 28.4vw;
+    opacity: 0;
+}
+
+.scheduled {
+    width: 42vw;
+    position: fixed;
+    margin: auto;
+}
+
+.pickedT {
+    transform: scale(1.2, 1.2);
+    transition: transform 0.25s linear;
+}
+
+.unpickedT {
+    transform: scale(0.8, 0.8);
+    transition: transform 0.25s linear;
+}
+
+.activeColor {
+    opacity: 1;
+    transition: opacity 0.25s linear;
+}
+
+

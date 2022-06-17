@@ -11,3 +11,10 @@
     font-style: normal;
     font-weight: normal;
 }
+
+@font-face {
+    font-family: "Arimo-Italic";
+    src: url("../font/Arimo-Italic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

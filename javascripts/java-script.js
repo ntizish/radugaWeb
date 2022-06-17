@@ -45,7 +45,12 @@ $(document).ready(function() {
         function () {
             let currentColor = $(".pickedColor"); //current color in heading (hidden atm)
 
-            let colorNameChanger = function () {
+            if (!colorClicked) {
+                $(".picker img").toggleClass("unpickedT");
+                pickedTClass = $(this);
+                $(this).toggleClass("unpickedT");
+                $(this).toggleClass("pickedT");
+                $(currentColor).toggleClass("activeColor");
                 if (this.className === "purpleT pickedT") {
                     currentColor.text(currentColor.text().replace(currentColor.text(), "пыльная лаванда"));
                 } else if (this.className === "redT pickedT"){
@@ -55,15 +60,6 @@ $(document).ready(function() {
                 } else if (this.className === "yellowT pickedT"){
                     currentColor.text(currentColor.text().replace(currentColor.text(), "горчичка"));
                 }
-            }
-
-            if (!colorClicked) {
-                $(".picker img").toggleClass("unpickedT");
-                pickedTClass = $(this);
-                $(this).toggleClass("unpickedT");
-                $(this).toggleClass("pickedT");
-                $(currentColor).toggleClass("activeColor");
-                colorNameChanger(); // loop must be placed here
             } else if (colorClicked && !($(this).hasClass("pickedT"))) { // check if clicked T is already selected
                 $(this).click(function (){
                     $(this).toggleClass("unpickedT");
@@ -71,7 +67,15 @@ $(document).ready(function() {
                     pickedTClass.toggleClass("pickedT");
                     pickedTClass.toggleClass("unpickedT");
                     pickedTClass = $(this);
-
+                    if (this.className === "purpleT pickedT") {
+                        currentColor.text(currentColor.text().replace(currentColor.text(), "пыльная лаванда"));
+                    } else if (this.className === "redT pickedT"){
+                        currentColor.text(currentColor.text().replace(currentColor.text(), "сочинский персик"));
+                    } else if (this.className === "greenT pickedT"){
+                        currentColor.text(currentColor.text().replace(currentColor.text(), "томный базилик"));
+                    } else if (this.className === "yellowT pickedT"){
+                        currentColor.text(currentColor.text().replace(currentColor.text(), "горчичка"));
+                    }
                 });
             }
 

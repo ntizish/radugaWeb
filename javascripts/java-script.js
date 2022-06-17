@@ -37,5 +37,17 @@ $(document).ready(function() {
         }
     );
 
+    $(".picker img").hover(
+        function () {
+            $(".picker img").css("transition", "transform 0.25s linear");
+            $(".picker img").css("transform", "scale(0.8, 0.8)");
+            $(this).css("transform", "scale(1.2, 1.2)");
+        },
+        function () {
+            $(".picker img").css("transition", "transform 0.25s linear");
+            $(".picker img").css("transform", "scale(1)");
+            $(this).css("transform", "scale(1)");
+        }
+    )
 
 });

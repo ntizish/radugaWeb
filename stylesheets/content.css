@@ -216,7 +216,7 @@ body {
 /*start of the tanPage*/
 
 .picker img {
-    width: 15vw;
+    width: 14vw;
     display: inline-block;
 
 }
@@ -230,6 +230,25 @@ body {
     justify-content: space-between;
 }
 
-.purpleT, .redT, .greenT {
-    padding-right: 9.6vw;
+.purpleT {
+
 }
+
+.redT {
+    position: absolute;
+    left: 25.9vw;
+}
+
+.greenT{
+    position: absolute;
+    left: 51.6vw;
+}
+
+.yellowT {
+    position: absolute;
+    left: 77.2vw;
+}
+
+/*.greenT:hover {*/
+/*    transform: scale(1.2, 1.2);*/
+/*}*/

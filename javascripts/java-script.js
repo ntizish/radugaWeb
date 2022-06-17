@@ -51,7 +51,7 @@ $(document).ready(function() {
                 $(this).toggleClass("unpickedT");
                 $(this).toggleClass("pickedT");
                 $(currentColor).toggleClass("activeColor");
-                if (this.className === "purpleT pickedT") {
+                if (this.className === "purpleT pickedT") { // put the ifs in one function and call it when needed
                     currentColor.text(currentColor.text().replace(currentColor.text(), "пыльная лаванда"));
                 } else if (this.className === "redT pickedT"){
                     currentColor.text(currentColor.text().replace(currentColor.text(), "сочинский персик"));

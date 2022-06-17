@@ -218,6 +218,7 @@ body {
 .picker img {
     width: 14vw;
     display: inline-block;
+    transition: transform 0.25s linear;
 
 }
 
@@ -263,6 +264,7 @@ body {
     position: absolute;
     top: 4.3vh;
     opacity: 0;
+    transition: opacity 0.25s linear;
 }
 
 .request {
@@ -323,17 +325,14 @@ input:focus{
 
 .pickedT {
     transform: scale(1.2, 1.2);
-    transition: transform 0.25s linear;
 }
 
 .unpickedT {
     transform: scale(0.8, 0.8);
-    transition: transform 0.25s linear;
 }
 
 .activeColor {
     opacity: 1;
-    transition: opacity 0.25s linear;
 }
 
 

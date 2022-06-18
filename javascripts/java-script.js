@@ -6,6 +6,7 @@ $(document).ready(function() {
 
     $(".tanLink").click(function() {document.location.href="./tanPage.html"});
     $(".shopLink").click(function() {document.location.href="./shop.html"});
+    $(".eventsLink").click(function() {document.location.href="./events.html"});
     $(".tote, .envelope, .books, .cream, .creamToo").hover(
         function () {
             $(".tote, .envelope, .books, .cream, .creamToo").css("filter", "blur(0.3vw)").css("transition", "filter 0.25s linear");
@@ -94,23 +95,6 @@ $(document).ready(function() {
         }
     );
 
-    // option 2 not working properly TO:DO
-    // $(".picker img").hover(
-    //     function () {
-    //         $(".picker img").css("transition", "transform 0.25s linear");
-    //         $(".picker img").css("transition", "padding-right 0.25s linear");
-    //         $(this).css("padding-left", "9.2vw");
-    //         $(this).css("padding-right", "10vw");
-    //         $(this).css("transform", "scale(1.2, 1.2)");
-    //     },
-    //     function () {
-    //         $(".picker img").css("transition", "transform 0.25s linear");
-    //         $(".picker img").css("transition", "padding-right 0.25s linear");
-    //         $(this).css("padding-right", "9.6vw");
-    //         $(this).css("transform", "scale(1)");
-    //     }
-    // )
-
     $(".picker img").click(
         function () {
             if (this.className === "purpleT") {
@@ -124,6 +108,72 @@ $(document).ready(function() {
     $(".sendButton").click(function () {
         $(".workspaceOne").css("filter", "blur(1vw)").css("transition", "filter 0.25s linear").css("pointer-events", "none");
         $(".scheduledDiv").css("opacity", "1").css("transition", "opacity 0.25s linear");
+        setTimeout(function () {
+            window.location.reload();
+        }, 4000);
+    });
+
+    let eventClicked = false;
+    let allEvents = ".onlineTour, .groupTan, .skinProbs, .colorImp, .melaninWho";
+    let pickedEventClass = null;
+    let visibleContent = null;
+    let visibleButton = null;
+    $(allEvents).hover(
+        function () {
+
+            if (!eventClicked) {
+                $(allEvents).toggleClass("eventUnpicked");
+                pickedEventClass = $(this);
+                $(this).toggleClass("eventUnpicked");
+                $(".eventsContainer p").toggleClass("eventUnpicked");
+                if (this.className === "onlineTour") {
+                    $(".onlineTourDiv").toggleClass("eventContentVisible");
+                    visibleContent = $(".onlineTourDiv");
+                    $(".visitButton").toggleClass("eventUnpicked");
+                    visibleButton = $(".visitButton");
+                } else if (this.className === "groupTan"){
+                    $(".groupTanDiv").toggleClass("eventContentVisible");
+                    visibleContent = $(".groupTanDiv");
+                    visibleButton = $(".one");
+                    $(".one").toggleClass("eventUnpicked");
+                } else if (this.className === "skinProbs"){
+                    $(".skinProbsDiv").toggleClass("eventContentVisible");
+                    visibleContent = $(".skinProbsDiv");
+                    $(".three").toggleClass("eventUnpicked");
+                    visibleButton = $(".three");
+                } else if (this.className === "colorImp"){
+                    $(".colorImpDiv").toggleClass("eventContentVisible");
+                    visibleContent = $(".colorImpDiv");
+                    $(".two").toggleClass("eventUnpicked");
+                    visibleButton = $(".two");
+                } else if (this.className === "melaninWho"){
+                    $(".melaninDiv").toggleClass("eventContentVisible");
+                    visibleContent = $(".melaninDiv");
+                    $(".four").toggleClass("eventUnpicked");
+                    visibleButton = $(".four");
+                }
+            } else if (colorClicked && !($(this).hasClass("pickedT"))) { // check if clicked T is already selected
+                $(this).click(function (){
+                    visibleContent.toggleClass("eventContentVisible");
+                });
+            }
+        },
+        function () {
+            if (!colorClicked) {
+                visibleContent.toggleClass("eventContentVisible");
+                $(allEvents).toggleClass("eventUnpicked");
+                $(this).toggleClass("eventUnpicked");
+                $(".eventsContainer p").toggleClass("eventUnpicked");
+                visibleButton.toggleClass("eventUnpicked");
+
+            }
+        }
+    );
+
+    $(".getInButton").click(function (){
+        $(".navBlock").css("transition", "filter 0.25s linear").css("filter", "blur(1vw)");
+        $(".eventsContainer").css("transition", "filter 0.25s linear").css("filter", "blur(1vw)");
+        $(".youreInDiv").css("transition", "opacity 0.25s linear").css("opacity", "1");
         setTimeout(function () {
             window.location.reload();
         }, 4000);

@@ -2,7 +2,7 @@ body {
     background-color: #121212;
     overflow: hidden;
     /*height: 100vh;*/
-    /*background-image: url("../img/columns.svg");*/
+    background-image: url("../img/columns.svg");
     width: 100vw;
     background-size: cover;
 }
@@ -333,6 +333,300 @@ input:focus{
 
 .activeColor {
     opacity: 1;
+}
+
+/*start of eventsPage*/
+
+.eventsContainer {
+    top: 74.4vh;
+    position: absolute;
+    width: 100vw;
+    height: 25.6vh;
+    background-image: url("../img/eventsBackG.svg");
+    background-size: cover;
+    vertical-align: top;
+}
+
+.eventsContainer img{
+    position: relative;
+    margin-top: 1vw;
+}
+
+
+.onlineTour {
+    width: 11vw;
+    margin-left: 2.7vw;
+    top: -2vw;
+}
+
+.groupTan {
+    width: 12.6vw;
+    margin-left: 7.4vw;
+}
+
+.skinProbs {
+    width: 12.6vw;
+    margin-left: 7.4vw;
+}
+
+.colorImp {
+    width: 12.6vw;
+    margin-left: 7.4vw;
+}
+
+.melaninWho {
+    width: 13.3vw;
+    margin-left: 7.4vw;
+    top: -2vw;
+}
+
+.visitButton {
+    position: absolute;
+    font-family: Arimo-Regular;
+    font-size: 1.25vw;
+    color: white;
+    text-decoration: underline;
+    margin-left: 8.4vw;
+}
+
+.getInButton {
+    position: absolute;
+    font-family: Arimo-Regular;
+    font-size: 1.25vw;
+    color: white;
+    text-decoration: underline;
+}
+
+.one {
+    margin-left: 27.4vw;
+}
+
+.two {
+    margin-left: 47.4vw;
+}
+
+.three {
+    margin-left: 67.4vw;
+}
+
+.four {
+    margin-left: 87.4vw;
+}
+
+.eventsContainer img {
+    transition: filter 0.25s linear;
+}
+
+.eventsContainer p {
+    transition: filter 0.25s linear;
+}
+
+.groupTanDiv {
+    z-index: -15;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+
+}
+.redTOne {
+    height: 74.2vh;
+    position: absolute;
+    left: 5.5vw;
+}
+
+.groupTanPoster {
+    position: absolute;
+    width: 16.1vw;
+    top: 7vh;
+    left: 42vw;
+}
+
+.groupTanHead {
+    font-family: Arimo-Bold;
+    font-size: 2.5vw;
+    position: absolute;
+    left: 60vw;
+    top: 7vh;
+    color: white;
+}
+
+.groupTanDesc {
+    font-family: Arimo-Regular;
+    font-size: 1.7vw;
+    position: absolute;
+    left: 60vw;
+    top: 14vh;
+    color: white;
+}
+/*next container*/
+.onlineTourDiv {
+    z-index: -14;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+
+}
+.redTTwo {
+    height: 74.2vh;
+    position: absolute;
+    left: 48.5vw;
+}
+
+.onlineTourPoster {
+    position: absolute;
+    width: 16.1vw;
+    top: 15vh;
+    left: 5.5vw;
+}
+
+.onlineTourHead {
+    font-family: Arimo-Bold;
+    font-size: 2.5vw;
+    position: absolute;
+    left: 23.5vw;
+    top: 15vh;
+    color: white;
+}
+
+.onlineTourDesc {
+    font-family: Arimo-Regular;
+    font-size: 1.7vw;
+    position: absolute;
+    left: 23.5vw;
+    top: 22vh;
+    color: white;
+}
+/*next container*/
+.skinProbsDiv {
+    z-index: -13;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+
+}
+.redTThree {
+    height: 74.2vh;
+    position: absolute;
+    left: 43.5vw;
+}
+
+.skinProbsPoster {
+    position: absolute;
+    width: 16.1vw;
+    top: 4vh;
+    left: 23.5vw;
+}
+
+.skinProbsHead {
+    font-family: Arimo-Bold;
+    font-size: 2.5vw;
+    position: absolute;
+    left: 42.5vw;
+    top: 4vh;
+    color: white;
+}
+
+.skinProbsDesc {
+    font-family: Arimo-Regular;
+    font-size: 1.7vw;
+    position: absolute;
+    left: 42.5vw;
+    top: 11vh;
+    color: white;
+}
+/*next container*/
+.colorImpDiv {
+    z-index: -12;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+
+}
+.redTFour {
+    height: 74.2vh;
+    position: absolute;
+    left: 58.5vw;
+}
+
+.colorImpPoster {
+    position: absolute;
+    width: 16.1vw;
+    top: 8vh;
+    left: 42vw;
+}
+
+.colorImpHead {
+    font-family: Arimo-Bold;
+    font-size: 2.5vw;
+    position: absolute;
+    left: 60.5vw;
+    top: 8vh;
+    color: white;
+}
+
+.colorImpDesc {
+    font-family: Arimo-Regular;
+    font-size: 1.7vw;
+    position: absolute;
+    left: 60.5vw;
+    top: 15vh;
+    color: white;
+}
+/*next container*/
+.melaninDiv {
+    z-index: -11;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+
+}
+.redTFive {
+    height: 74.2vh;
+    position: absolute;
+    left: 58.5vw;
+}
+
+.melaninPoster {
+    position: absolute;
+    width: 16.1vw;
+    top: 17vh;
+    left: 23.5vw;
+}
+
+.melaninHead {
+    font-family: Arimo-Bold;
+    font-size: 2.5vw;
+    position: absolute;
+    left: 42.5vw;
+    top: 17vh;
+    color: white;
+}
+
+.melaninDesc {
+    font-family: Arimo-Regular;
+    font-size: 1.7vw;
+    position: absolute;
+    left: 42.5vw;
+    top: 24vh;
+    color: white;
+}
+
+.eventUnpicked {
+    filter: blur(0.3vw);
+}
+
+.eventContentVisible {
+    opacity: 1;
+}
+
+.youreInDiv {
+    position: fixed;
+    width: 42vw;
+    z-index: 15;
+    margin: -28vh auto auto;
+    left: 28.4vw;
+    opacity: 0;
+}
+
+.youreIn {
+    width: 42vw;
+    position: fixed;
+    margin: auto;
 }
 
 

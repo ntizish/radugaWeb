@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{ссылка}">
+    <meta property="og:title" content="название">
+    <meta property="og:description" content="текст">
+    <meta property="og:image" content="{картинка}">
+    <title>товары</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="./stylesheets/style.css" rel="stylesheet" type="text/css"/>
+    <script src="javascripts/jquery-3.6.0.js" charset="utf-8"></script>
+    <script src="javascripts/java-script.js" charset="utf-8"></script>
+    <style>
+        .navBlock {
+            top: 19.8vh;
+            left: 5.2vw;
+            margin-top: 0;
+        }
+
+        .cart {
+            left: 79.5vw;
+            margin-left: 0;
+        }
+        .navBlock .shopLink {
+            filter: blur(0);
+        }
+
+        .envelope {
+            width: 26.7vw;
+            position: absolute;
+            top: 13.8vh;
+            left: 8.5vw;
+        }
+
+        .bagPage img, .itemDesc {
+            transition: filter 0.25s linear;
+        }
+    </style>
+</head>
+<body class="bagPage">
+
+
+   <p class="cart">корзина / 0</p>
+    <nav class="navBlock">
+        <p class="aboutLink">о нас</p>
+        <p class="tanLink">загореть</p>
+        <p class="shopLink">товары</p>
+        <p class="eventsLink">события</p>
+    </nav>
+
+    <div class="itemSection">
+        <img class="envelope" src="./img/envelope.png">
+        <div class="itemDesc">
+            <p class="item">ОТКРЫТКА</p>
+            <p class="item description">привнесите в жизнь своих друзей ещё<br>
+                больше света, подарив им нашу<br>фирменную яркую открытку в конверте<br><br>
+                половина средств, вырученных с продажи<br>данного товара передается в фонд борьбы<br>с кожными заболеваниями и дальтонизмом<br><br>
+
+
+
+                650р.</p>
+        </div>
+        <p class="toCart">В КОРЗИНУ</p>
+
+    </div>
+
+
+
+
+</body>
+</html>

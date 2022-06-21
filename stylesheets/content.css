@@ -141,7 +141,7 @@ body {
     margin-top: -49vh;
 }
 
-.bin {
+.cart {
     text-transform: uppercase;
     font-family: Arimo-Regular;
     font-size: 2.5vw;
@@ -218,7 +218,8 @@ body {
 .picker img {
     width: 14vw;
     display: inline-block;
-    transition: transform 0.25s linear;
+    transition: filter 0.25s linear,
+            transform 0.25s linear;
 
 }
 
@@ -462,6 +463,7 @@ input:focus{
     z-index: -14;
     opacity: 0;
     transition: opacity 0.25s linear;
+    position: relative;
 
 }
 .redTTwo {
@@ -499,6 +501,7 @@ input:focus{
     z-index: -13;
     opacity: 0;
     transition: opacity 0.25s linear;
+    position: relative;
 
 }
 .redTThree {
@@ -536,6 +539,7 @@ input:focus{
     z-index: -12;
     opacity: 0;
     transition: opacity 0.25s linear;
+    position: relative;
 
 }
 .redTFour {
@@ -573,6 +577,7 @@ input:focus{
     z-index: -11;
     opacity: 0;
     transition: opacity 0.25s linear;
+    position: relative;
 
 }
 .redTFive {
@@ -628,5 +633,58 @@ input:focus{
     position: fixed;
     margin: auto;
 }
+
+/*start of bagPage css*/
+.itemSection {
+    width: 100vw;
+    background-image: url("../img/bagBack.svg");
+    position: absolute;
+    z-index: -10;
+    height: 73.5vh;
+    top: 26.5vh;
+}
+
+.itemDesc {
+    position: absolute;
+    width: 40vw;
+    left: 41.9vw;
+    top: 14.1vh;
+}
+
+.item {
+    font-family: Arimo-Regular;
+    font-size: 3.3vw;
+    color: white;
+}
+
+.description {
+    font-size: 1.7vw;
+    margin-top: 2vh;
+}
+
+.toCart {
+    font-family: Arimo-Regular;
+    font-size: 3.3vw;
+    position: absolute;
+    color: white;
+    left: 76.5vw;
+    top: 61vh;
+    filter: blur(0.2vw);
+    transition: filter 0.25s linear;
+}
+
+.activeToCart {
+    filter: blur(0);
+}
+
+.addedMessage {
+    left: 29.7vw;
+    top: 33.3vh;
+    filter: blur(0);
+    opacity: 0;
+    transition: opacity 0.25s linear;
+    z-index: 50;
+}
+
 
 

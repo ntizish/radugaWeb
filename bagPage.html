@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{ссылка}">
+    <meta property="og:title" content="название">
+    <meta property="og:description" content="текст">
+    <meta property="og:image" content="{картинка}">
+    <title>товары</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="./stylesheets/style.css" rel="stylesheet" type="text/css"/>
+    <script src="javascripts/jquery-3.6.0.js" charset="utf-8"></script>
+    <script src="javascripts/java-script.js" charset="utf-8"></script>
+    <style>
+        .navBlock {
+            top: 19.8vh;
+            left: 5.2vw;
+            margin-top: 0;
+        }
+
+        .cart {
+            left: 79.5vw;
+            margin-left: 0;
+        }
+        .navBlock .shopLink {
+            filter: blur(0);
+        }
+
+        .tote {
+            width: 16vw;
+            position: absolute;
+            top: 6.8vh;
+            left: 14.5vw;
+        }
+
+        .bagPage img, .itemDesc {
+            transition: filter 0.25s linear;
+        }
+    </style>
+</head>
+<body class="bagPage">
+
+
+   <p class="cart">корзина / 0</p>
+    <nav class="navBlock">
+        <p class="aboutLink">о нас</p>
+        <p class="tanLink">загореть</p>
+        <p class="shopLink">товары</p>
+        <p class="eventsLink">события</p>
+    </nav>
+
+    <div class="itemSection">
+        <img class="tote" src="./img/tote.png">
+        <div class="itemDesc">
+            <p class="item">СУМКА</p>
+            <p class="item description">модная и экологичная сумка для прогулок<br>и простых походов в магазин со стильным<br>фирменным принтом РАДУГА<br><br>
+                материал: 90% хлопок, 5% полиэстер<br><br>
+                2400р.</p>
+        </div>
+        <p class="toCart">В КОРЗИНУ</p>
+
+    </div>
+
+
+
+
+</body>
+</html>

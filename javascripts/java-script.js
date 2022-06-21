@@ -65,8 +65,10 @@ $(document).ready(function() {
                 $(this).click(function (){
                     $(this).toggleClass("unpickedT");
                     $(this).toggleClass("pickedT");
+                    $(this).toggleClass("eventUnpicked");
                     pickedTClass.toggleClass("pickedT");
                     pickedTClass.toggleClass("unpickedT");
+                    pickedTClass.toggleClass("eventUnpicked");
                     pickedTClass = $(this);
                     if (this.className === "purpleT pickedT") {
                         currentColor.text(currentColor.text().replace(currentColor.text(), "пыльная лаванда"));
@@ -82,7 +84,12 @@ $(document).ready(function() {
 
 
             $(this).click(function (){
+                if (!colorClicked) {
+                    pickedTClass.toggleClass("eventUnpicked");
+                    $(".picker img").toggleClass("eventUnpicked");
+                }
                 colorClicked = true;
+
             });
         },
         function () {
@@ -94,14 +101,6 @@ $(document).ready(function() {
             }
         }
     );
-
-    $(".picker img").click(
-        function () {
-            if (this.className === "purpleT") {
-                $(this).toggleClass("picked");
-
-            }
-        });
 
 
 
@@ -178,6 +177,25 @@ $(document).ready(function() {
             window.location.reload();
         }, 4000);
     });
+    let itemsInCart = 0;
+
+    // shop scripts
+    $(".toCart").hover(
+        function () {
+            $(this).toggleClass("activeToCart");
+
+            $(this).click(function() { // add to the cart and increase cart by one
+                // $(".cart").text($(".cart").text().replace(itemsInCart.toString(), (itemsInCart+ 1).toString()));
+                // itemsInCart += 1;
+                $(".toCart").text($(".toCart").text().replace("В КОРЗИНУ", "ДОБАВЛЕНО"));
+
+            });
+        },
+        function () {
+            $(".toCart").text($(".toCart").text().replace($(".toCart").text(), "В КОРЗИНУ"));
+            $(this).toggleClass("activeToCart");
+        }
+    );
 
 
 });

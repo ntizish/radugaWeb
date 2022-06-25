@@ -1,28 +1,152 @@
-@media only screen and (min-width: 1224px) {
-  /* Desktop */
+@media only screen and (min-width: 1000px) and (max-device-width: 1040px) {
+    .linkContainer {
+        margin-top: 18.2vh;
+    }
+
+  .itemBlock img {
+      margin-top: 7vh;
+  }
+ .bagPage .tote {
+     top: 13.8vh;
+ }
+
+ .bagPage .itemDesc {
+     top: 21.1vh;
+ }
+
+ .bagPage .envelope {
+     top: 19.5vh;
+ }
+
+ .bagPage .books {
+     top: 22.2vh;
+ }
+
+ .bagPage .cream {
+     top: 14.9vh;
+ }
+
+ .onlineTourPoster {
+     width: 26.1vw;
+ }
+
+ .onlineTourHead {
+     left: 33.5vw;
+ }
+
+ .onlineTourDesc{
+     left: 33.5vw;
+ }
+
+ .groupTanPoster {
+     width: 26.1vw;
+     left: 32vw;
+ }
+
+ .colorImpPoster {
+     width: 26.1vw;
+     left: 32vw;
+ }
+
+ .skinProbsPoster {
+     width: 26.1vw;
+     left: 13.5vw;
+ }
+
+ .melaninPoster {
+     width: 26.1vw;
+     left: 13.5vw;
+     top: 12vh;
+ }
+
+ .melaninDesc {
+     top: 19vh;
+ }
+
+ .melaninHead {
+     top: 12vh;
+ }
+
+ .teammateOneDesc {
+     top: 25vh;
+ }
+
+ .teammateTwoDesc {
+     top: 33vh;
+ }
+
+ .eventsContainer {
+     padding-top: 2vw;
+ }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* iPad */
+@media only screen and (max-device-width: 780px) and (min-device-width: 750px) {
+    .workspaceOne {
+        display: none;
+    }
+
+    .runLine {
+        transform: rotate(90deg);
+        height: 100vw;
+        width: 100vh;
+        margin-top: 16.5vw;
+        left: -17vw;
+    }
+
+    .runLineImg {
+        height: 100vw;
+        filter: blur(1vw);
+    }
+
+    .rotateMessage {
+        display: block;
+    }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  /* iPad Portrait */
+@media only screen and (max-device-width: 440px) and (min-device-width: 400px) {
+    .workspaceOne {
+        display: none;
+    }
+
+    .runLine {
+        transform: rotate(90deg);
+        height: 100vw;
+        width: 100vh;
+        margin-top: 57.5vw;
+        left: -59.5vw;
+    }
+
+    .runLineImg {
+        height: 100vw;
+        filter: blur(1vw);
+    }
+
+    .rotateMessage {
+        display: block;
+        top: 96vw;
+    }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* iPad Landscape */
+@media only screen and (max-device-width: 380px) and (min-device-width: 320px) {
+    .workspaceOne {
+        display: none;
+    }
+
+    .runLine {
+        transform: rotate(90deg);
+        height: 100vw;
+        width: 100vh;
+        margin-top: 39.5vw;
+        left: -39vw;
+    }
+
+    .runLineImg {
+        height: 100vw;
+        filter: blur(1vw);
+    }
+
+    .rotateMessage {
+        display: block;
+        top: 43vh;
+    }
 }
-
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
-  /* iPhone Portrait */
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) {
-  /* iPhone Landscape */
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
-  /* iPhone Portrait */
-  

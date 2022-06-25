@@ -1,16 +1,25 @@
 $(document).ready(function() {
 
-    let a = 0;
+    let a = 0; // delete those
     let b = 1000;
-    $(".runLineImg").clone().appendTo(".runLine");
-
+    $(".textRunOne").clone().appendTo(".runOne");
+    $(".textRunTwo").clone().appendTo(".runTwo");
+    $(".runLineImg").clone().prependTo(".runLine");
+    $(".shopPage .tote").click(function() {document.location.href="./bagPage.html"});
+    $(".shopPage .envelope").click(function() {document.location.href="./envelopePage.html"});
+    $(".shopPage .books").click(function() {document.location.href="./bookPage.html"});
+    $(".shopPage .cream").click(function() {document.location.href="./creamPage.html"});
     $(".tanLink").click(function() {document.location.href="./tanPage.html"});
+    $(".aboutLink").click(function() {document.location.href="./about.html"});
     $(".shopLink").click(function() {document.location.href="./shop.html"});
     $(".eventsLink").click(function() {document.location.href="./events.html"});
+    $(".linkToExperience").click(function() {document.location.href="https://en.calameo.com/read/007038981fdb357dc8989"});
+    $(".visitButton").click(function() {document.location.href="https://ntizish.github.io/experience/"});
     $(".tote, .envelope, .books, .cream, .creamToo").hover(
         function () {
             $(".tote, .envelope, .books, .cream, .creamToo").css("filter", "blur(0.3vw)").css("transition", "filter 0.25s linear");
             $(this).css("filter", "blur(0)");
+            $(".creamToo").css("filter", "blur(0.3vw)");
             let item = $(".itemName"); //current item in heading (hidden atm)
             let price = $(".itemPrice"); //current price of the item in heading (hidden atm)
             $(".itemPrice, .itemName").css("opacity", "1");
@@ -28,11 +37,11 @@ $(document).ready(function() {
                 price.text(price.text().replace(price.text(), "1000р."));
             } else if (this.className === "creamToo"){
                 item.text(item.text().replace(item.text(), "увлажняющий крем"));
-                price.text(price.text().replace(price.text(), "1000р."));
+                price.text(price.text().replace(price.text(), "НЕТ В НАЛИЧИИ"));
             }
         },
         function () {
-            $(".tote, .envelope, .books, .cream, .creamToo").css("filter", "blur(0)").css("transition", "filter 0.25s linear");
+            $(".tote, .envelope, .books, .cream").css("filter", "blur(0)").css("transition", "filter 0.25s linear");
             $(".itemPrice, .itemName").css("opacity", "0");
         }
     );
@@ -196,6 +205,36 @@ $(document).ready(function() {
             $(this).toggleClass("activeToCart");
         }
     );
+
+    $(".styleJs, .tanJs, .innovationJs, .teamJs").hover(function (){
+        $(".styleJs, .tanJs, .innovationJs, .teamJs, .slash").toggleClass("eventUnpicked");
+        $(this).toggleClass("eventUnpicked");
+        if ((this.className === "tanJs") || (this.className === "innovationJs")) {
+            $(".textRunOne").css("animation-play-state", "paused");
+        } else {
+            $(".textRunTwo").css("animation-play-state", "paused");
+        }
+        if (this.className === "tanJs") {
+            $(".tanningContainer").css("opacity", "1");
+        } else if (this.className === "styleJs") {
+            $(".styleContainer").css("opacity", "1");
+        } else if (this.className === "innovationJs") {
+            $(".innovationContainer").css("opacity", "1");
+        } else if (this.className === "teamJs") {
+            $(".teamContainer").css("opacity", "1");
+        }
+    }, function () {
+        $(this).toggleClass("eventUnpicked");
+        $(".styleJs, .tanJs, .innovationJs, .teamJs, .slash").toggleClass("eventUnpicked");
+        $(".textRunOne, .textRunTwo").css("animation-play-state", "running");
+        $(".teamContainer, .innovationContainer, .styleContainer, .tanningContainer").css("opacity", "0");
+    });
+
+    if ((((750 < $(window).width()) && ($(window).width() < 780)) || ((400 < $(window).width()) && ($(window).width() < 420)) ||
+        ((340 < $(window).width()) && ($(window).width() < 380))) && !(window.location.pathname.toString().includes("index.html"))) {
+        document.location.href="./index.html";
+    }
+
 
 
 });

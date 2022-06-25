@@ -2,7 +2,7 @@ body {
     background-color: #121212;
     overflow: hidden;
     /*height: 100vh;*/
-    background-image: url("../img/columns.svg");
+    /*background-image: url("../img/columns.svg");*/
     width: 100vw;
     background-size: cover;
 }
@@ -120,6 +120,11 @@ body {
     100% {transform: translateX(-100%);}
 }
 
+@keyframes marcRev {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(0);}
+}
+
 /*shop page*/
 
 .shopPage .navBlock {
@@ -165,7 +170,6 @@ body {
 }
 
 .itemPrice {
-    text-transform: uppercase;
     font-family: Arimo-Regular;
     font-size: 1.7vw;
     color: white;
@@ -186,7 +190,7 @@ body {
 }
 
 .itemBlock img {
-    padding-right: 5.5vw;
+    padding-right: 6.5vw;
     margin-top: 3vh;
     z-index: 5;
     position: relative;
@@ -211,6 +215,7 @@ body {
 .creamToo {
     width: 11.7vw;
     padding-right: 0;
+    filter: blur(0.3vw);
 }
 
 /*start of the tanPage*/
@@ -646,7 +651,7 @@ input:focus{
 
 .itemDesc {
     position: absolute;
-    width: 40vw;
+    width: 45vw;
     left: 41.9vw;
     top: 14.1vh;
 }
@@ -686,5 +691,193 @@ input:focus{
     z-index: 50;
 }
 
+/*start of about section*/
+.aboutSection {
+    width: 100vw;
+    background-image: url("../img/aboutBackG.svg");
+    position: absolute;
+    z-index: -10;
+    height: 73.5vh;
+    top: 55.1vh;
+}
+
+.aboutRunOne {
+
+}
+
+.runOne {
+    width: 100vw;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    top: 3vh;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.runText {
+    font-family: Arimo-Bold;
+    font-size: 10.2vw;
+    color: white;
+    text-transform: lowercase;
+}
+
+.textRunOne {
+    height: 100vh;
+    margin-left: 0;
+    animation: marc 15s linear infinite;
+    animation-play-state: running;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.runTwo {
+    width: 100vw;
+    z-index: 1;
+    position: absolute;
+    overflow: hidden;
+    top: 23.8vh;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.textRunTwo {
+    height: 100vh;
+    margin-left: 0;
+    animation: marcRev 15s linear infinite;
+    animation-play-state: running;
+    display: inline-block;
+    vertical-align: top;
+}
+/*style container*/
+.styleContainer {
+    z-index: -11;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+    position: relative;
+}
+
+.styleImg {
+    position: absolute;
+    width: 16.1vw;
+    left: 23.5vw;
+    top: 10vh;
+}
+
+.styleText {
+    font-family: Arimo-Regular;
+    font-size: 1.7vw;
+    position: absolute;
+    left: 41.9vw;
+    top: 10vh;
+    color: white;
+}
+
+/*start of innovation container*/
+.innovationContainer {
+    z-index: -11;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+    position: relative;
+}
+
+.innovationImg {
+    position: absolute;
+    width: 48vw;
+    left: 9vw;
+    top: -3vh;
+}
+
+.innovationText {
+    font-family: Arimo-Regular;
+    font-size: 1.7vw;
+    position: absolute;
+    left: 60.2vw;
+    top: 11vh;
+    color: white;
+}
+
+/*start of team container*/
+.teamContainer {
+    z-index: -11;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+    position: relative;
+}
+
+.teamImg {
+    position: absolute;
+    width: 16.25vw;
+    left: 60.2vw;
+    top: 1vh;
+}
+
+.teamText {
+    font-family: Arimo-Regular;
+    font-size: 1.7vw;
+    position: absolute;
+    left: 5.4vw;
+    top: 25vh;
+    color: white;
+}
+
+.second {
+    left: 78.5vw;
+    top: 9vh;
+}
+
+.teammateOneDesc {
+    position: absolute;
+    left: 60.2vw;
+    top: 34vh;
+    font-family: Arimo-Regular;
+    font-size: 1.25vw;
+    color: white;
+}
+
+.teammateTwoDesc {
+    position: absolute;
+    left: 78.5vw;
+    top: 42vh;
+    font-family: Arimo-Regular;
+    font-size: 1.25vw;
+    color: white;
+}
+
+/*start of mission container*/
+.tanningContainer {
+    z-index: -11;
+    opacity: 0;
+    transition: opacity 0.25s linear;
+    position: relative;
+}
+
+.tanningImg {
+    position: absolute;
+    width: 24vw;
+    left: 12vw;
+    top: 4vh;
+}
+
+.tanningText {
+    font-family: Arimo-Regular;
+    font-size: 1.7vw;
+    position: absolute;
+    left: 41.9vw;
+    top: 8vh;
+    color: white;
+}
+
+.rotateMessage {
+    position: absolute;
+    font-family: Arimo-Regular;
+    font-size: 8.3vw;
+    text-align: center;
+    display: none;
+    color: white;
+    text-transform: uppercase;
+    left: 19vw;
+    top: 54vw;
+}
 
 

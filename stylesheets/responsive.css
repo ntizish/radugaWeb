@@ -6,6 +6,15 @@
   .itemBlock img {
       margin-top: 7vh;
   }
+
+  .errorMessage {
+      top: 47vh;
+  }
+
+  .gifka {
+      top: 27vh;
+  }
+
  .bagPage .tote {
      top: 13.8vh;
  }

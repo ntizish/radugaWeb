@@ -15,6 +15,7 @@ $(document).ready(function() {
     $(".eventsLink").click(function() {document.location.href="./events.html"});
     $(".linkToExperience").click(function() {document.location.href="https://en.calameo.com/read/007038981fdb357dc8989"});
     $(".visitButton").click(function() {document.location.href="https://ntizish.github.io/experience/"});
+    $(".cart").click(function() {document.location.href="./error.html"});
     $(".tote, .envelope, .books, .cream, .creamToo").hover(
         function () {
             $(".tote, .envelope, .books, .cream, .creamToo").css("filter", "blur(0.3vw)").css("transition", "filter 0.25s linear");

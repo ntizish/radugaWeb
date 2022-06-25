@@ -881,3 +881,17 @@ input:focus{
 }
 
 
+.gifka {
+    position: absolute;
+    width: 35vw;
+    left: 20vw;
+    top: 19vh;
+}
+
+.errorMessage {
+    position: absolute;
+    width: 15vw;
+    left: 61vw;
+    top: 41vh;
+}
+

@@ -190,13 +190,17 @@ $(document).ready(function() {
     let itemsInCart = 0;
 
     // shop scripts
+    $(".toCart").click(function () {
+        $(".cart").text($(".cart").text().replace(itemsInCart.toString(), (itemsInCart+ 1).toString()));
+        itemsInCart += 1;
+    });
+
     $(".toCart").hover(
         function () {
             $(this).toggleClass("activeToCart");
 
             $(this).click(function() { // add to the cart and increase cart by one
                 // $(".cart").text($(".cart").text().replace(itemsInCart.toString(), (itemsInCart+ 1).toString()));
-                // itemsInCart += 1;
                 $(".toCart").text($(".toCart").text().replace("В КОРЗИНУ", "ДОБАВЛЕНО"));
 
             });
